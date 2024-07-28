@@ -1,0 +1,64 @@
+﻿@model WebShopping.Models.Customer
+
+@{
+    ViewBag.Title = $"{Resources.Update} {Resources.Customer}";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>
+            @Resources.Update @Resources.Customer @Html.ActionLink($"{Resources.B2L}", "Index", "Customer", new { @class = "btn btn-outline-dark" })
+        </h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.ID)
+
+        <div class="form-group mb-3">
+            @Html.Label($"{Resources.Name}", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group mb-3">
+            @Html.Label($"{Resources.Gender}", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <label class="form-check-label">@Html.RadioButtonFor(model => model.Gender, WebShopping.Models.Gender.Male, new { htmlAttributes = new { @class = "form-check-input", @checked = true } }) @Resources.Male</label>
+                <label class="form-check-label ms-4">@Html.RadioButtonFor(model => model.Gender, WebShopping.Models.Gender.Female, new { htmlAttributes = new { @class = "form-check-input" } }) @Resources.Female</label>
+                <br />
+                @Html.ValidationMessageFor(model => model.Gender, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group mb-3">
+            @Html.Label($"{Resources.Address}", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Address, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group mb-3">
+            @Html.Label($"{Resources.Phone}", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Phone, new { htmlAttributes = new { @class = "form-control PhoneField", @maxlength = 14 } })
+                @Html.ValidationMessageFor(model => model.Phone, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="@Resources.Update" class="btn btn-primary" />
+            </div>
+        </div>
+    </div>
+}
+
+
+@section scripts {
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+}

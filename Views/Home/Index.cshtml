@@ -1,0 +1,105 @@
+﻿@{
+    ViewBag.Title = $"{Resources.Home}";
+}
+@section css {
+    <link href="~/wwwroot/css/Home.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+}
+<main>
+    @Html.Partial("Alerts")
+    <div class="container mt-5">
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-md-4 mb-4 order-5 order-md-0">
+                    <a href="/home">
+                        <div class="card card-home">
+                            <div class="card-body text-center">
+                                <i class="fas fa-home fa-3x mb-3"></i>
+                                <h5 class="card-title">@Resources.Home</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 mb-4 order-1 order-md-1">
+                    <a href="/Home/About">
+                        <div class="card card-about">
+                            <div class="card-body text-center">
+                                <i class="fas fa-info fa-3x mb-3"></i>
+                                <h5 class="card-title">@Resources.About</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 mb-4 order-2 order-md-2">
+                    <a href="/Customer">
+                        <div class="card card-customers">
+                            <div class="card-body text-center">
+                                <i class="fas fa-users fa-3x mb-3"></i>
+                                <h5 class="card-title">@Resources.Customers</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 mb-4 order-3 order-md-3">
+                    <a href="/Category">
+                        <div class="card card-categories">
+                            <div class="card-body text-center">
+                                <i class="fas fa-th-large fa-3x mb-3"></i>
+                                <h5 class="card-title">@Resources.Categories</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 mb-4 order-4 order-md-4">
+                    <a href="/Item">
+                        <div class="card card-items">
+                            <div class="card-body text-center">
+                                <i class="fas fa-box fa-3x mb-3"></i>
+                                <h5 class="card-title">@Resources.Items</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 mb-4 order-0 order-md-5">
+                    <a href="/Invoice">
+                        <div class="card card-invoices">
+                            <div class="card-body text-center">
+                                <i class="fas fa-file-invoice fa-3x mb-3"></i>
+                                <h5 class="card-title">@Resources.Invoices</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                @if (Request.Cookies["Auth"] != null && SimpleEncryptor.Decrypt(Request.Cookies["Auth"]["Boss"]) == true.ToString())
+                {
+                    <style>
+                        .card-admin {
+                            background-color: #FF4081;
+                        }
+
+                            .card-admin:hover {
+                                background-color: #C2185B;
+                            }
+                    </style>
+                    <div class="col-md-4 mb-4 order-6 order-md-6">
+                        <a href="/Admin">
+                            <div class="card card-admin">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-user-shield fa-3x mb-3"></i>
+                                    <h5 class="card-title">@Resources.Admins</h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</main>
+
+@section scripts
+{
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+}

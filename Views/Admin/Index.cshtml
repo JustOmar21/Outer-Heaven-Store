@@ -1,0 +1,100 @@
+﻿@model List<WebShopping.Models.Admin>
+@{
+    ViewBag.Title = $"{Resources.Admins}";
+}
+
+<h2>@Resources.Admins @Html.ActionLink($"{Resources.Add} +", "Add", "Admin", new { @class = "btn btn-primary" })</h2>
+@section css {
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+}
+@Html.Partial("Alerts")
+<div><input class="form-control searchField mb-3" placeholder="@Resources.SearchName" oninput="Search(event)" /></div>
+<div class="table-responsive">
+
+    <table class="table table-bordered table-hover table-striped text-center">
+        <thead>
+            <tr>
+                <th>@Resources.ID</th>
+                <th>@Resources.Name</th>
+                <th>@Resources.Email</th>
+                <th>@Resources.Ops</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var admin in Model)
+            {
+                <tr>
+                    <td>@admin.ID</td>
+                    <td class="text-capitalize">@if (admin.IsBoss == true)
+                    {<i class="fas fa-star ms-1 text-warning d-inline"></i>}@admin.Name</td>
+                    <td>@admin.Email</td>
+                    <td class="flex justify-content-between text-nowrap">
+                        @Html.ActionLink($"{Resources.ChangeName}", "ChangeName", "Account", new { adminID = admin.ID }, new { @class = "btn btn-outline-primary" })
+                        @Html.ActionLink($"{Resources.ResetPass}", "ResetPass", "Account", new { adminID = admin.ID }, new { @class = "btn btn-outline-dark" })
+                        @if (!admin.IsBoss)
+                        {<button class="btn btn-outline-danger" onclick="sendValues(@admin.ID,'@admin.Name')" data-bs-toggle="modal" data-bs-target="#exampleModal">@Resources.Delete</button>
+                    }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<!-- Modal -->
+@using (Html.BeginForm("Delete", "Admin", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5 text-danger" id="exampleModalLabel">@Resources.DelOps</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Are you sure you want to delete this user ?
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">@Resources.Cancel</button>
+                    <input hidden name="id" class="hiddenID" />
+                    <button type="submit" class="btn btn-danger">@Resources.DelConfirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+
+@section scripts {
+    <script>
+        var Name;
+        var ID;
+        var children = Array.from(document.querySelectorAll("tbody tr"));
+        function sendValues(ID, Name) {
+            console.log("Hi")
+            this.ID = ID
+            document.querySelector(".modal-body").innerHTML = `@Resources.DelAdmin`
+            document.querySelector(".hiddenID").value = ID;
+        }
+        function Search(e) {
+            var body = document.querySelector("tbody");
+            body.innerHTML = ""
+            for (var item of children) {
+                body.innerHTML += item
+            }
+            var childrens = Array.from(document.querySelectorAll("tbody tr"));
+
+            var filtered = children.filter((item) => {
+                return item.children[1].innerText.toLowerCase().includes(e.currentTarget.value.toLowerCase())
+            })
+            body.innerHTML = ""
+            for (var item of filtered) {
+                body.innerHTML += item.innerHTML
+            }
+        }
+    </script>
+}

@@ -1,0 +1,522 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="About" xml:space="preserve">
+    <value>حول</value>
+  </data>
+  <data name="Action" xml:space="preserve">
+    <value>الفعل</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>إضافة</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>عنوان</value>
+  </data>
+  <data name="Admin" xml:space="preserve">
+    <value>مسؤول</value>
+  </data>
+  <data name="AdminDelete" xml:space="preserve">
+    <value>تم حذف المسؤول</value>
+  </data>
+  <data name="AdminInsert" xml:space="preserve">
+    <value>تم إضافة المسؤول</value>
+  </data>
+  <data name="AdminInsertFail" xml:space="preserve">
+    <value>فشل إضافة المسؤول</value>
+  </data>
+  <data name="AdminNotFound" xml:space="preserve">
+    <value>هذا المسؤول غير موجود</value>
+  </data>
+  <data name="AdminPass" xml:space="preserve">
+    <value>تم إعادة كلمة المرور إلي أصلها لهذا المسؤول</value>
+  </data>
+  <data name="Admins" xml:space="preserve">
+    <value>المسؤولين</value>
+  </data>
+  <data name="Amount" xml:space="preserve">
+    <value>كمية</value>
+  </data>
+  <data name="AmountVali" xml:space="preserve">
+    <value>لا يمكنك طلب منتج اقل من مرة او عشرة مرات في الفاتورة الواحدة</value>
+  </data>
+  <data name="B2L" xml:space="preserve">
+    <value>الرجوع إلي القائمة</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>إلغاء</value>
+  </data>
+  <data name="CatDelete" xml:space="preserve">
+    <value>تم حذف الصنف</value>
+  </data>
+  <data name="Categories" xml:space="preserve">
+    <value>الأصناف</value>
+  </data>
+  <data name="Category" xml:space="preserve">
+    <value>الصنف</value>
+  </data>
+  <data name="CategoryInsert" xml:space="preserve">
+    <value>تم إضافة الصنف</value>
+  </data>
+  <data name="CategoryReq" xml:space="preserve">
+    <value>الصنف مطلوب إدخاله</value>
+  </data>
+  <data name="CatInsertFail" xml:space="preserve">
+    <value>فشل إضافة الصنف</value>
+  </data>
+  <data name="CatNotFound" xml:space="preserve">
+    <value>هذا الصنف غير موجود</value>
+  </data>
+  <data name="CatUnique" xml:space="preserve">
+    <value>اسم هذا الصنف مستخدم بواسطة صنف اخر</value>
+  </data>
+  <data name="CatUpdate" xml:space="preserve">
+    <value>تم تحديث بيانات الصنف</value>
+  </data>
+  <data name="CatUpdateFail" xml:space="preserve">
+    <value>فشل تحديث بيانات الصنف</value>
+  </data>
+  <data name="ChangeName" xml:space="preserve">
+    <value>تحديث الأسم</value>
+  </data>
+  <data name="ChangePass" xml:space="preserve">
+    <value>تحديث كلمة المرور</value>
+  </data>
+  <data name="ContactUs" xml:space="preserve">
+    <value>تواصل معنا</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>إنشاء</value>
+  </data>
+  <data name="CusDelete" xml:space="preserve">
+    <value>تم حذف العميل</value>
+  </data>
+  <data name="CusInsert" xml:space="preserve">
+    <value>تم إضافة العميل</value>
+  </data>
+  <data name="CusInsertFail" xml:space="preserve">
+    <value>فشل إضافة العميل </value>
+  </data>
+  <data name="CusNotFound" xml:space="preserve">
+    <value>هذا العميل  غير موجود</value>
+  </data>
+  <data name="Customer" xml:space="preserve">
+    <value>العميل</value>
+  </data>
+  <data name="Customers" xml:space="preserve">
+    <value>العملاء</value>
+  </data>
+  <data name="CusUpdate" xml:space="preserve">
+    <value>تم تحديث بيانات العميل</value>
+  </data>
+  <data name="CusUpdateFail" xml:space="preserve">
+    <value>فشل تحديث بيانات العميل</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>تاريخ</value>
+  </data>
+  <data name="DateValiPast" xml:space="preserve">
+    <value>التاريخ يجب ألا يكون بعد</value>
+  </data>
+  <data name="DelAdmin" xml:space="preserve">
+    <value>هل انت واثق من حذف هذا المسؤول ؟</value>
+  </data>
+  <data name="DelBoss" xml:space="preserve">
+    <value>لا يمكنك حذف رئيس الشركة, يا ولاااا</value>
+  </data>
+  <data name="DelConfirm" xml:space="preserve">
+    <value>تأكيد الحذف</value>
+  </data>
+  <data name="DelCustomer" xml:space="preserve">
+    <value>هل انت واثق من حذف هذا العميل ؟</value>
+  </data>
+  <data name="DelDesc" xml:space="preserve">
+    <value>هل انت واثق من حذف هذا الصنف ؟</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>حذف</value>
+  </data>
+  <data name="DelInv" xml:space="preserve">
+    <value>هل انت واثق من حذف فاتورة هذا العميل ؟</value>
+  </data>
+  <data name="DelInvItem" xml:space="preserve">
+    <value>هل انت واثق من حذف هذا المنتج من الفاتورة ؟</value>
+  </data>
+  <data name="DelOps" xml:space="preserve">
+    <value>عملية الحذف</value>
+  </data>
+  <data name="DelWarn" xml:space="preserve">
+    <value>جميع المنتجات تحت هذا الصنف سوف يتم حذفها ايضا</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>الوصف</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>التفاصيل</value>
+  </data>
+  <data name="dir" xml:space="preserve">
+    <value>rtl</value>
+  </data>
+  <data name="Discount" xml:space="preserve">
+    <value>الخصم</value>
+  </data>
+  <data name="DiscountTotal" xml:space="preserve">
+    <value>الإجمالي بالخصم</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>البريد الإلكتروني</value>
+  </data>
+  <data name="EmailUnique" xml:space="preserve">
+    <value>هذا الأيميل مستخدم بالفعل</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>خطأ !</value>
+  </data>
+  <data name="ErrorEvent" xml:space="preserve">
+    <value>حدث خطأ</value>
+  </data>
+  <data name="Female" xml:space="preserve">
+    <value>أنثي</value>
+  </data>
+  <data name="Gender" xml:space="preserve">
+    <value>النوع</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>الصفحة الرئيسية</value>
+  </data>
+  <data name="ID" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="Image" xml:space="preserve">
+    <value>الصورة</value>
+  </data>
+  <data name="ImageFile" xml:space="preserve">
+    <value>ملف الصورة</value>
+  </data>
+  <data name="ImgItem" xml:space="preserve">
+    <value>صورة المنتج</value>
+  </data>
+  <data name="ImgLarge" xml:space="preserve">
+    <value>الحد الأقصي لحجم الملف هو 4MB</value>
+  </data>
+  <data name="ImgSupport" xml:space="preserve">
+    <value>الملفات المسموحة هي .pdf , .jpeg , .png</value>
+  </data>
+  <data name="ImgUpdate" xml:space="preserve">
+    <value>تحديث الصورة</value>
+  </data>
+  <data name="ImgWarn" xml:space="preserve">
+    <value>ملف الصورة لا يمكن ان يتجاوز 4MB</value>
+  </data>
+  <data name="InvDelete" xml:space="preserve">
+    <value>تم حذف الفاتورة</value>
+  </data>
+  <data name="InvInsert" xml:space="preserve">
+    <value>تم إضافة الفاتورة</value>
+  </data>
+  <data name="InvInsertFail" xml:space="preserve">
+    <value>فشل إضافة الفاتورة</value>
+  </data>
+  <data name="InvItemDelete" xml:space="preserve">
+    <value>تم حذف المنتج من الفاتورة</value>
+  </data>
+  <data name="InvItemExists" xml:space="preserve">
+    <value>المنتج الذي حاولت إضافته موجود بالفعل في الفاتورة</value>
+  </data>
+  <data name="InvItemInsert" xml:space="preserve">
+    <value>تم إضافة منتج إلي الفاتورة</value>
+  </data>
+  <data name="InvItemNoItems" xml:space="preserve">
+    <value>لا يمكنك إضافة أي منتج لهذه الفاتورة لأنه لا يوجد أي منتج</value>
+  </data>
+  <data name="InvItemNotFound" xml:space="preserve">
+    <value>هذا المنتج غير موجود في الفاتورة</value>
+  </data>
+  <data name="InvItemUpdate" xml:space="preserve">
+    <value>تم تحديث بيانات المنتج في الفاتورة</value>
+  </data>
+  <data name="InvNoCustomers" xml:space="preserve">
+    <value>لا يمكنك إضافة أي فاتورة لأنك لا تمتلك عملاء</value>
+  </data>
+  <data name="InvNotFound" xml:space="preserve">
+    <value>هذه الفاتورة غير موجودة</value>
+  </data>
+  <data name="Invoice" xml:space="preserve">
+    <value>الفاتورة</value>
+  </data>
+  <data name="Invoices" xml:space="preserve">
+    <value>الفواتير</value>
+  </data>
+  <data name="InvoicesOf" xml:space="preserve">
+    <value>فواتير</value>
+  </data>
+  <data name="InvUpdate" xml:space="preserve">
+    <value>تم تحديث بيانات الفاتورة</value>
+  </data>
+  <data name="InvUpdateFail" xml:space="preserve">
+    <value>فشل تحديث بيانات الفاتورة</value>
+  </data>
+  <data name="Item" xml:space="preserve">
+    <value>المنتج</value>
+  </data>
+  <data name="ItemAmount" xml:space="preserve">
+    <value>هذا المنتج يحتوي علي</value>
+  </data>
+  <data name="ItemCatWarning" xml:space="preserve">
+    <value>لا يمكنك إضافة منتجات بدون وجود صنف واحد علي الأقل</value>
+  </data>
+  <data name="ItemDel" xml:space="preserve">
+    <value>هل انت واثق من حذف هذا المنتج ؟</value>
+  </data>
+  <data name="ItemDelete" xml:space="preserve">
+    <value>تم حذف المنتج</value>
+  </data>
+  <data name="ItemInsert" xml:space="preserve">
+    <value>تم إضافة المنتج</value>
+  </data>
+  <data name="ItemInsertFail" xml:space="preserve">
+    <value>فشل إضافة المنتج</value>
+  </data>
+  <data name="ItemNos" xml:space="preserve">
+    <value>عدد المنتجات</value>
+  </data>
+  <data name="ItemNotFound" xml:space="preserve">
+    <value>هذا المنتج غير موجود</value>
+  </data>
+  <data name="ItemPhotoUpdate" xml:space="preserve">
+    <value>تم تحديث صورة المنتج</value>
+  </data>
+  <data name="ItemPhotoUpdateFail" xml:space="preserve">
+    <value>فشل تحديث صورة المنتج</value>
+  </data>
+  <data name="Items" xml:space="preserve">
+    <value>المنتجات</value>
+  </data>
+  <data name="ItemsFor" xml:space="preserve">
+    <value>منتجات</value>
+  </data>
+  <data name="ItemUpdate" xml:space="preserve">
+    <value>تم تحديث بيانات المنتج بنجاح</value>
+  </data>
+  <data name="ItemUpdateFail" xml:space="preserve">
+    <value>فشل تحديث بيانات المنتج</value>
+  </data>
+  <data name="lang" xml:space="preserve">
+    <value>ar</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>تسجيل الدخول</value>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>تسجيل الخروج</value>
+  </data>
+  <data name="Male" xml:space="preserve">
+    <value>ذكر</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>الإسم</value>
+  </data>
+  <data name="NameChange" xml:space="preserve">
+    <value>تم تغيير إسم المسؤول بنجاح</value>
+  </data>
+  <data name="NameVali" xml:space="preserve">
+    <value>الأسم يتكون من حروف فقط و علي الأقل 3 حروف</value>
+  </data>
+  <data name="NewPassword" xml:space="preserve">
+    <value>كلمة المرور الجديدة</value>
+  </data>
+  <data name="NewPasswordAgain" xml:space="preserve">
+    <value>كلمة المرور الجديدة مجدداً</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>لا</value>
+  </data>
+  <data name="NoItemWarning" xml:space="preserve">
+    <value>لا يمكنك إضافة منتج لهذه الفاتورة لأنه لا يوجد اي منتجات, برجاء إضافة منتجات للإستكمال</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>حسناً</value>
+  </data>
+  <data name="OldPassword" xml:space="preserve">
+    <value>كلمة المرور القديمة</value>
+  </data>
+  <data name="Ops" xml:space="preserve">
+    <value>العمليات</value>
+  </data>
+  <data name="PassChanged" xml:space="preserve">
+    <value>تم تغيير كلمة مرور المسؤول بنجاح</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>كلمة المرور</value>
+  </data>
+  <data name="PasswordLog" xml:space="preserve">
+    <value>يوجد خطأ إما في الإيميل أو كلمة المرور</value>
+  </data>
+  <data name="PasswordMatch" xml:space="preserve">
+    <value>كلمات المرور غير متطابقة</value>
+  </data>
+  <data name="PasswordVali" xml:space="preserve">
+    <value>كلمة المرور يجب ان تكون علي الأقل 8 حروف و أن يحتوي علي الأقل حرف كبير, حرف صغير, و رقم </value>
+  </data>
+  <data name="Phone" xml:space="preserve">
+    <value>الهاتف</value>
+  </data>
+  <data name="PhoneVali" xml:space="preserve">
+    <value>هذا الرقم غير صالح</value>
+  </data>
+  <data name="PhotoOf" xml:space="preserve">
+    <value>صورة</value>
+  </data>
+  <data name="Price" xml:space="preserve">
+    <value>السعر</value>
+  </data>
+  <data name="ResetPass" xml:space="preserve">
+    <value>إعادة كلمة المرور للأصل</value>
+  </data>
+  <data name="SearchName" xml:space="preserve">
+    <value>البحث بواسطة الإسم</value>
+  </data>
+  <data name="StoreName" xml:space="preserve">
+    <value>متجر السماء الخارجية</value>
+  </data>
+  <data name="Success" xml:space="preserve">
+    <value>نجاح!</value>
+  </data>
+  <data name="Timeout" xml:space="preserve">
+    <value>دقيقتان قد مرت بدون اي فعاليات علي الموقع, هل تريد الأستمرار ؟</value>
+  </data>
+  <data name="Total" xml:space="preserve">
+    <value>الإجمالي</value>
+  </data>
+  <data name="Unit" xml:space="preserve">
+    <value>عنصر</value>
+  </data>
+  <data name="Units" xml:space="preserve">
+    <value>عناصر</value>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>تحديث</value>
+  </data>
+  <data name="Warning" xml:space="preserve">
+    <value>تحذير!</value>
+  </data>
+  <data name="WrongPass" xml:space="preserve">
+    <value>كلمة المرور هذه ليست صحيحة</value>
+  </data>
+</root>

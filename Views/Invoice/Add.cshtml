@@ -1,0 +1,90 @@
+﻿@model WebShopping.Models.Invoice
+
+@{
+    ViewBag.Title = $"{Resources.Add} {Resources.Invoice}";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>
+            @Resources.Add @Resources.Invoice @Html.ActionLink($"{Resources.B2L}", "Index", "Invoice", new { @class = "btn btn-outline-dark" })
+        </h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.Label($"{Resources.Date}", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10 dateCorrect">
+                @if(Model == null) 
+                { <input type="datetime-local" value="@DateTime.Now.ToString("yyyy-MM-ddTHH:mm")" max="@DateTime.Now.AddMinutes(1).ToString("yyyy-MM-ddTHH:mm")" name="Date" class="form-control" />}
+                else 
+                { <input type="datetime-local" value="@Model.Date.ToString("yyyy-MM-ddTHH:mm")" max="@DateTime.Now.AddMinutes(1).ToString("yyyy-MM-ddTHH:mm")" name="Date" class="form-control" /> }
+                @Html.ValidationMessageFor(model => model.Date, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label($"{Resources.Discount}", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Discount, new { htmlAttributes = new { @class = "form-control", @max="100",@min = "0" } })
+                @Html.ValidationMessageFor(model => model.Discount, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label($"{Resources.Customer}", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <select name="CustomerID" class="form-control">
+                    <option disabled selected value=@null  >Select Customer</option>
+                    @foreach(var customer in ViewBag.Customers as List<WebShopping.Models.Customer>)
+                    {
+                        <option value="@customer.ID">@customer.Name | @customer.Gender | @customer.Address | @customer.Phone</option>
+                    }
+                </select>
+                @Html.ValidationMessageFor(model => model.CustomerID, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10 mt-3">
+                <input type="submit" value="@Resources.Create" class="btn btn-primary" />
+            </div>
+        </div>
+    </div>
+}
+
+@section scripts {
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+    <script>
+        let dateVali = document.querySelector(".dateCorrect span");
+        let dateSelect = document.querySelector(".dateCorrect input");
+        dateSelect.addEventListener("blur", () => {
+            if (dateVali.children.length == 1) {
+                let child = dateVali.children[0];
+                let splitChild = child.innerText.split("to ");
+                let splitDate = splitChild[1].split("T");
+                let hour = splitDate[1].split(":")
+                hour[0] = Number.parseInt(hour[0])
+                hour[1] = Number.parseInt(hour[1])
+
+                if (hour[0] == 0) {
+                    splitDate[1] = `12:${hour[1]} AM`
+                }
+                else if (hour[0] == 12)
+                {
+                    splitDate[1] = `12:${hour[1]} PM`
+                }
+                else
+                {
+                    splitDate[1] = `${hour[0] % 12}:${hour[1]} ${(hour[0] % 12 == 0 ? "AM" : "PM")}`;
+                }
+                splitDate[0] = splitDate[0].replace(/-/g, "/").split("/").reverse().join("/")
+                splitDate = splitDate.join(" ");
+                child.innerText = `@Resources.DateValiPast ${splitDate}`
+            }
+        })
+    </script>
+}

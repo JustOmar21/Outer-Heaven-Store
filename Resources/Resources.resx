@@ -1,0 +1,522 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="About" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="Action" xml:space="preserve">
+    <value>Action</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="Admin" xml:space="preserve">
+    <value>Admin</value>
+  </data>
+  <data name="AdminDelete" xml:space="preserve">
+    <value>Admin Deletion complete</value>
+  </data>
+  <data name="AdminInsert" xml:space="preserve">
+    <value>Admin insertion is complete</value>
+  </data>
+  <data name="AdminInsertFail" xml:space="preserve">
+    <value>Admin insertion was a failure</value>
+  </data>
+  <data name="AdminNotFound" xml:space="preserve">
+    <value>Admin doesn't exist</value>
+  </data>
+  <data name="AdminPass" xml:space="preserve">
+    <value>Admin's password reset is complete</value>
+  </data>
+  <data name="Admins" xml:space="preserve">
+    <value>Admins</value>
+  </data>
+  <data name="Amount" xml:space="preserve">
+    <value>Amount</value>
+  </data>
+  <data name="AmountVali" xml:space="preserve">
+    <value>You cannot order less than 1 unit or more than 10 units of an item in a single Invoice</value>
+  </data>
+  <data name="B2L" xml:space="preserve">
+    <value>Back To List</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="CatDelete" xml:space="preserve">
+    <value>Category Deletion complete</value>
+  </data>
+  <data name="Categories" xml:space="preserve">
+    <value>Categories</value>
+  </data>
+  <data name="Category" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="CategoryInsert" xml:space="preserve">
+    <value>Category insertion complete</value>
+  </data>
+  <data name="CategoryReq" xml:space="preserve">
+    <value>Category is required</value>
+  </data>
+  <data name="CatInsertFail" xml:space="preserve">
+    <value>Category insertion was a failure</value>
+  </data>
+  <data name="CatNotFound" xml:space="preserve">
+    <value>Category doesn't exist</value>
+  </data>
+  <data name="CatUnique" xml:space="preserve">
+    <value>This Category's name is already used</value>
+  </data>
+  <data name="CatUpdate" xml:space="preserve">
+    <value>Updating Category is complete</value>
+  </data>
+  <data name="CatUpdateFail" xml:space="preserve">
+    <value>Updating Category was a failure</value>
+  </data>
+  <data name="ChangeName" xml:space="preserve">
+    <value>Change Name</value>
+  </data>
+  <data name="ChangePass" xml:space="preserve">
+    <value>Change Password</value>
+  </data>
+  <data name="ContactUs" xml:space="preserve">
+    <value>Contact Us</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>Create</value>
+  </data>
+  <data name="CusDelete" xml:space="preserve">
+    <value>Customer Deletion complete</value>
+  </data>
+  <data name="CusInsert" xml:space="preserve">
+    <value>Customer insertion complete</value>
+  </data>
+  <data name="CusInsertFail" xml:space="preserve">
+    <value>Customer insertion was a failure</value>
+  </data>
+  <data name="CusNotFound" xml:space="preserve">
+    <value>Customer doesn't exist</value>
+  </data>
+  <data name="Customer" xml:space="preserve">
+    <value>Customer</value>
+  </data>
+  <data name="Customers" xml:space="preserve">
+    <value>Customers</value>
+  </data>
+  <data name="CusUpdate" xml:space="preserve">
+    <value>Updating Customer is complete</value>
+  </data>
+  <data name="CusUpdateFail" xml:space="preserve">
+    <value>Updating Customer was a failure</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="DateValiPast" xml:space="preserve">
+    <value>The Date should not be past</value>
+  </data>
+  <data name="DelAdmin" xml:space="preserve">
+    <value>Are you sure you want to delete this Admin ?</value>
+  </data>
+  <data name="DelBoss" xml:space="preserve">
+    <value>You cannot delete The Boss, BOI</value>
+  </data>
+  <data name="DelConfirm" xml:space="preserve">
+    <value>Confirm Delete</value>
+  </data>
+  <data name="DelCustomer" xml:space="preserve">
+    <value>Are you sure you want to delete this Customer ?</value>
+  </data>
+  <data name="DelDesc" xml:space="preserve">
+    <value>Are you sure you want to delete this Category ?</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="DelInv" xml:space="preserve">
+    <value>Are you sure you want to delete this customer's Invoice ?</value>
+  </data>
+  <data name="DelInvItem" xml:space="preserve">
+    <value>Are you sure you want to delete this Invoice item ?</value>
+  </data>
+  <data name="DelOps" xml:space="preserve">
+    <value>Deletion Process</value>
+  </data>
+  <data name="DelWarn" xml:space="preserve">
+    <value>ALL ITEMS UNDER THIS CATEGORY WILL BE DELETED</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="dir" xml:space="preserve">
+    <value>ltr</value>
+  </data>
+  <data name="Discount" xml:space="preserve">
+    <value>Discount</value>
+  </data>
+  <data name="DiscountTotal" xml:space="preserve">
+    <value>Discounted Total</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="EmailUnique" xml:space="preserve">
+    <value>This Email is already used</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Error!</value>
+  </data>
+  <data name="ErrorEvent" xml:space="preserve">
+    <value>An Error has occured</value>
+  </data>
+  <data name="Female" xml:space="preserve">
+    <value>Female</value>
+  </data>
+  <data name="Gender" xml:space="preserve">
+    <value>Gender</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="ID" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="Image" xml:space="preserve">
+    <value>Image</value>
+  </data>
+  <data name="ImageFile" xml:space="preserve">
+    <value>Image File</value>
+  </data>
+  <data name="ImgItem" xml:space="preserve">
+    <value>Item's Image</value>
+  </data>
+  <data name="ImgLarge" xml:space="preserve">
+    <value>File is too large, File limit is 4 MB</value>
+  </data>
+  <data name="ImgSupport" xml:space="preserve">
+    <value>Supported File Formats are .jpg , .jpeg and .png</value>
+  </data>
+  <data name="ImgUpdate" xml:space="preserve">
+    <value>Update Photo</value>
+  </data>
+  <data name="ImgWarn" xml:space="preserve">
+    <value>An Image File Cannot exceeds 4 MB</value>
+  </data>
+  <data name="InvDelete" xml:space="preserve">
+    <value>Invoice Deletion complete</value>
+  </data>
+  <data name="InvInsert" xml:space="preserve">
+    <value>Invoice insertion complete</value>
+  </data>
+  <data name="InvInsertFail" xml:space="preserve">
+    <value>Invoice insertion was a failure</value>
+  </data>
+  <data name="InvItemDelete" xml:space="preserve">
+    <value>Invoice Item Deletion complete</value>
+  </data>
+  <data name="InvItemExists" xml:space="preserve">
+    <value>The Item you inserted is already in this Invoice</value>
+  </data>
+  <data name="InvItemInsert" xml:space="preserve">
+    <value>Invoice Item insertion complete</value>
+  </data>
+  <data name="InvItemNoItems" xml:space="preserve">
+    <value>You can't add any item since there aren't any</value>
+  </data>
+  <data name="InvItemNotFound" xml:space="preserve">
+    <value>This Invoice Item doesn't exist</value>
+  </data>
+  <data name="InvItemUpdate" xml:space="preserve">
+    <value>Invoice Item Update is complete</value>
+  </data>
+  <data name="InvNoCustomers" xml:space="preserve">
+    <value>You can't add any invoice because you don't have any customers</value>
+  </data>
+  <data name="InvNotFound" xml:space="preserve">
+    <value>Invoice was not found</value>
+  </data>
+  <data name="Invoice" xml:space="preserve">
+    <value>Invoice</value>
+  </data>
+  <data name="Invoices" xml:space="preserve">
+    <value>Invoices</value>
+  </data>
+  <data name="InvoicesOf" xml:space="preserve">
+    <value>Invoices Of</value>
+  </data>
+  <data name="InvUpdate" xml:space="preserve">
+    <value>Updating Invoice is complete</value>
+  </data>
+  <data name="InvUpdateFail" xml:space="preserve">
+    <value>Updating Invoice was a failure</value>
+  </data>
+  <data name="Item" xml:space="preserve">
+    <value>Item</value>
+  </data>
+  <data name="ItemAmount" xml:space="preserve">
+    <value>This Item only have</value>
+  </data>
+  <data name="ItemCatWarning" xml:space="preserve">
+    <value>Cannot Add Items without at least 1 Category inserted</value>
+  </data>
+  <data name="ItemDel" xml:space="preserve">
+    <value>Are you sure you want to delete this Item ?</value>
+  </data>
+  <data name="ItemDelete" xml:space="preserve">
+    <value>Item Deletion complete</value>
+  </data>
+  <data name="ItemInsert" xml:space="preserve">
+    <value>Item insertion complete</value>
+  </data>
+  <data name="ItemInsertFail" xml:space="preserve">
+    <value>Item insertion was a failure</value>
+  </data>
+  <data name="ItemNos" xml:space="preserve">
+    <value># of Items</value>
+  </data>
+  <data name="ItemNotFound" xml:space="preserve">
+    <value>Item was not found</value>
+  </data>
+  <data name="ItemPhotoUpdate" xml:space="preserve">
+    <value>Item's Photo Update complete</value>
+  </data>
+  <data name="ItemPhotoUpdateFail" xml:space="preserve">
+    <value>Item's Photo Update was a failure</value>
+  </data>
+  <data name="Items" xml:space="preserve">
+    <value>Items</value>
+  </data>
+  <data name="ItemsFor" xml:space="preserve">
+    <value>Items For</value>
+  </data>
+  <data name="ItemUpdate" xml:space="preserve">
+    <value>Item Update complete</value>
+  </data>
+  <data name="ItemUpdateFail" xml:space="preserve">
+    <value>Item Update was a failure</value>
+  </data>
+  <data name="lang" xml:space="preserve">
+    <value>en</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>Logout</value>
+  </data>
+  <data name="Male" xml:space="preserve">
+    <value>Male</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="NameChange" xml:space="preserve">
+    <value>Admin's name successfully changed</value>
+  </data>
+  <data name="NameVali" xml:space="preserve">
+    <value>Name must contain only letters and be at least 3 characters long.</value>
+  </data>
+  <data name="NewPassword" xml:space="preserve">
+    <value>New Password</value>
+  </data>
+  <data name="NewPasswordAgain" xml:space="preserve">
+    <value>New Password Again</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="NoItemWarning" xml:space="preserve">
+    <value>You cannot add an item to this Invoice because no item exist, Please Add items to continue</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="OldPassword" xml:space="preserve">
+    <value>Old Password</value>
+  </data>
+  <data name="Ops" xml:space="preserve">
+    <value>Operations</value>
+  </data>
+  <data name="PassChanged" xml:space="preserve">
+    <value>Admin's password was successfully changed</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="PasswordLog" xml:space="preserve">
+    <value>Either The email or the password is invalid</value>
+  </data>
+  <data name="PasswordMatch" xml:space="preserve">
+    <value>Passwords do not match</value>
+  </data>
+  <data name="PasswordVali" xml:space="preserve">
+    <value>Password must be at least 8 characters long, contain at least one uppercase letter, one lowercase letter, and one digit.</value>
+  </data>
+  <data name="Phone" xml:space="preserve">
+    <value>Phone</value>
+  </data>
+  <data name="PhoneVali" xml:space="preserve">
+    <value>Phone number is invalid</value>
+  </data>
+  <data name="PhotoOf" xml:space="preserve">
+    <value>Photo Of</value>
+  </data>
+  <data name="Price" xml:space="preserve">
+    <value>Price</value>
+  </data>
+  <data name="ResetPass" xml:space="preserve">
+    <value>Reset Password</value>
+  </data>
+  <data name="SearchName" xml:space="preserve">
+    <value>Search By Name</value>
+  </data>
+  <data name="StoreName" xml:space="preserve">
+    <value>Outer Heaven Store</value>
+  </data>
+  <data name="Success" xml:space="preserve">
+    <value>Success!</value>
+  </data>
+  <data name="Timeout" xml:space="preserve">
+    <value>2 minutes of inactivites has passed, Do you want to continue ?</value>
+  </data>
+  <data name="Total" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="Unit" xml:space="preserve">
+    <value>Unit</value>
+  </data>
+  <data name="Units" xml:space="preserve">
+    <value>Units</value>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="Warning" xml:space="preserve">
+    <value>Warning !</value>
+  </data>
+  <data name="WrongPass" xml:space="preserve">
+    <value>This password is incorrect</value>
+  </data>
+</root>

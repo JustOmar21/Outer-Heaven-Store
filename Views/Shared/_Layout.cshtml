@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<html lang="@WebShopping.Resources.Resources.lang" dir="@WebShopping.Resources.Resources.dir">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @RenderSection("css", false)
+</head>
+<body>
+
+    <nav class="navbar navbar-dark navbar-expand-lg bg-dark sticky-top">
+        <div class="container-fluid">
+            @Html.ActionLink($"{WebShopping.Resources.Resources.StoreName}", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Outer Heaven Store</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body bg-dark">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li>@Html.ActionLink($"{WebShopping.Resources.Resources.Home}", "Index", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink($"{Resources.About}", "About", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                        @if (Request.Cookies["Auth"] != null && SimpleEncryptor.Decrypt(Request.Cookies["Auth"]["Boss"]) == true.ToString())
+                        {
+                            <li>@Html.ActionLink($"{WebShopping.Resources.Resources.Admins}", "", "Admin", new { area = "" }, new { @class = "nav-link" })</li>
+                        }
+                        @if (Request.Cookies["Auth"] != null)
+                        {
+                            <li>@Html.ActionLink($"{WebShopping.Resources.Resources.Customers}", "", "Customer", new { area = "" }, new { @class = "nav-link" })</li>
+                            <li>@Html.ActionLink($"{WebShopping.Resources.Resources.Categories}", "", "Category", new { area = "" }, new { @class = "nav-link" })</li>
+                            <li>@Html.ActionLink($"{WebShopping.Resources.Resources.Items}", "", "Item", new { area = "" }, new { @class = "nav-link" })</li>
+                            <li>@Html.ActionLink($"{WebShopping.Resources.Resources.Invoices}", "", "Invoice", new { area = "" }, new { @class = "nav-link" })</li>
+                            <li>@Html.ActionLink($"{WebShopping.Resources.Resources.ChangePass}", "ChangePass", "Account", new { adminID = SimpleEncryptor.Decrypt(Request.Cookies["Auth"]["ID"]) }, new { @class = "nav-link" })</li>
+                        }
+
+
+
+                        @if (System.Globalization.CultureInfo.CurrentUICulture.ToString() == "ar")
+                        {
+                            <li class="flex-grow-1">@Html.ActionLink($"English", "ChangeLang", "Home", new { langID = 1 }, new { @class = "nav-link" })</li>
+                        }
+                        else
+                        {
+                            <li class="flex-grow-1">@Html.ActionLink($"العربية", "ChangeLang", "Home", new { langID = 2 }, new { @class = "nav-link" })</li>
+                        }
+
+                        @if (Request.Cookies["Auth"] != null)
+                        {
+                            <li>@Html.ActionLink($"{Resources.Logout}", "Logout", "Account", new { area = "" }, new { @class = "nav-link logoutBTN" })</li>
+                        }
+                        else
+                        {
+                            <li>@Html.ActionLink($"{Resources.Login}", "Login", "Account", new { area = "" }, new { @class = "nav-link" })</li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - A JustOmar&trade; Application</p>
+        </footer>
+    </div>
+
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary d-none mainModalBTN" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        Launch static backdrop modal
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">@Resources.Warning</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    @Resources.Timeout
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" onclick="logout()" >@Resources.No</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">@Resources.OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+    @if (Request.Cookies["Auth"] != null)
+    {
+        <script>
+            var timeout;
+
+            document.addEventListener("mousemove", resetTimer);
+            document.addEventListener("click", resetTimer);
+            document.addEventListener("scroll", resetTimer);
+
+            timeout = setTimeout(function () {
+                $(".mainModalBTN").click();
+            }, 2 * 60 * 1000);
+
+            function resetTimer() {
+                clearTimeout(timeout);
+                timeout = setTimeout(function () {
+                    $(".mainModalBTN").click();
+                }, 2 * 60 * 1000);
+            }
+
+            function logout() {
+                console.log("bruh");
+                document.querySelector(".logoutBTN").click();
+            }
+        </script>
+    }
+</body>
+</html>

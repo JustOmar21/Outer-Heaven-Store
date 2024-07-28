@@ -1,0 +1,107 @@
+﻿@model WebShopping.Models.Invoice
+@{
+    ViewBag.Title = $"{Resources.Details}";
+}
+
+<h2>@Resources.ItemsFor "@Model.Customer.Name" @Resources.Invoice @Resources.ID @Model.ID @Html.ActionLink($"{Resources.Add} +", "AddItem", new { invoiceID = Model.ID }, new { @class = "btn btn-primary" })</h2>
+
+@Html.Partial("Alerts")
+<div><input class="form-control searchField mb-3" placeholder="@Resources.SearchName" oninput="Search(event)" /></div>
+<div class="table-responsive">
+
+    <table class="table table-bordered table-hover table-striped text-center text-capitalize">
+        <thead>
+            <tr>
+                <th>@Resources.Item @Resources.ID</th>
+                <th>@Resources.Item</th>
+                <th>@Resources.Discount</th>
+                <th>@Resources.Price</th>
+                <th>@Resources.Amount</th>
+                <th>@Resources.Total</th>
+                <th>@Resources.DiscountTotal</th>
+                <th>@Resources.Ops</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var invoice in Model.Items)
+            {
+                <tr class="text-nowrap">
+                    <td>@invoice.ItemID</td>
+                    <td><img src="@invoice.Item.ImageURL" style="width:70px;height:70px" alt="Img's Photo" />@invoice.Item.Name</td>
+                    <td>@invoice.Discount.ToString("0'%'")</td>
+                    <td>@invoice.Item.Price.ToString("0,0.00 'EGP'")</td>
+                    <td>@invoice.Amount.ToString($"0,0 '{Resources.Unit}'")</td>
+                    <td>@((invoice.Item.Price * invoice.Amount).ToString("0,0.00 'EGP'"))</td>
+                    <td>@(((invoice.Item.Price * invoice.Amount) - ((invoice.Discount/(decimal)100) * (invoice.Item.Price * invoice.Amount))).ToString("0,0.00 'EGP'"))</td>
+                    <td class="flex justify-content-between text-nowrap">
+                        @Html.ActionLink($"{Resources.Update}", "EditItem", "Invoice", new { invoiceID = invoice.InvoiceID, itemID = invoice.ItemID }, new { @class = "btn btn-outline-primary" })
+                        <button class="btn btn-outline-danger" onclick="sendValues(@invoice.InvoiceID,@invoice.ItemID)" data-bs-toggle="modal" data-bs-target="#exampleModal">@Resources.Delete</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<!-- Modal -->
+@using (Html.BeginForm("DeleteItem", "Invoice", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5 text-danger" id="exampleModalLabel">@Resources.DelOps</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Are you sure you want to delete this Invoice ?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">@Resources.Cancel</button>
+                    <input hidden name="itemID" class="hiddenID" />
+                    <input hidden name="invoiceID" class="hiddenID2" />
+                    <button type="submit" class="btn btn-danger">@Resources.DelConfirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+
+@section scripts {
+    <script>
+        var Name;
+        var ID;
+        var ID2;
+        var children = Array.from(document.querySelectorAll("tbody tr"));
+        function sendValues(invoiceID, itemID) {
+            console.log("Hi")
+            this.ID = itemID
+            this.ID2 = invoiceID
+            document.querySelector(".modal-body").innerHTML =
+                `@Resources.DelInvItem
+                    `
+            document.querySelector(".hiddenID").value = ID;
+            document.querySelector(".hiddenID2").value = ID2;
+        }
+        function Search(e) {
+            var body = document.querySelector("tbody");
+            body.innerHTML = ""
+            for (var item of children) {
+                body.innerHTML += item
+            }
+            var childrens = Array.from(document.querySelectorAll("tbody tr"));
+            var filtered = children.filter((item) => {
+                return item.children[1].innerText.toLowerCase().includes(e.currentTarget.value.toLowerCase())
+            })
+            body.innerHTML = ""
+            for (var item of filtered) {
+                body.innerHTML += item.innerHTML
+            }
+        }
+    </script>
+}
+
